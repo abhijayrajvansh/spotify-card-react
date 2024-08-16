@@ -20,7 +20,9 @@ const Spotify = () => {
     const res = await axios.get(API_URL + searchSong)
     const title = res.data.data.results[0].name;
     const image = res.data.data.results[0].image[2].url;
-    const singer = res.data.data.results[0].singers;
+    const singer = res.data.data.results[0].artists.primary[0].name;
+
+    console.log('response:', res.data.data.results[0])
 
     setSong({
       songName: title,
