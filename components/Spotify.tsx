@@ -22,8 +22,6 @@ const Spotify = () => {
     const image = res.data.data.results[0].image[2].url;
     const singer = res.data.data.results[0].artists.primary[0].name;
 
-    console.log('response:', res.data.data.results[0])
-
     setSong({
       songName: title,
       artist: singer,
