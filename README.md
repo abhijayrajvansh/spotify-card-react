@@ -2,4 +2,6 @@
 
 Author: [Abhijay Rajvansh](https://abhijayrajvansh.com)
 
-TBW
+## Component
+
+![Sample](public/images/big-dawgs.png)
