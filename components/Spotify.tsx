@@ -7,7 +7,7 @@ import axios from 'axios';
 
 const Spotify = () => {
 
-  const [searchSong, setSearchSong] = useState('big dawgs'); // hail indian DHH
+  const [searchSong, setSearchSong] = useState('big dawgs'); // hail big stepper
   const API_URL = process.env.NEXT_PUBLIC_MUSIC_CLIENT_API as string;
 
   const [song, setSong] = useState({
@@ -18,9 +18,9 @@ const Spotify = () => {
 
   const fetchSongData = async () => {
     const res = await axios.get(API_URL + searchSong)
-    const title = res.data.data.songs.results[0].title;
-    const image = res.data.data.songs.results[0].image[2].url;
-    const singer = res.data.data.songs.results[0].singers;
+    const title = res.data.data.results[0].name;
+    const image = res.data.data.results[0].image[2].url;
+    const singer = res.data.data.results[0].singers;
 
     setSong({
       songName: title,
